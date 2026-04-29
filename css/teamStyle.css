@@ -1,0 +1,228 @@
+.research-team{
+padding:80px 8%;
+background:#f7f9f8;
+}
+
+.team-header{
+text-align:center;
+max-width:800px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.team-badge{
+display:inline-block;
+padding:8px 18px;
+border-radius:25px;
+background:#e9f5ee;
+color:#2f8f5b;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
+
+}
+
+.team-header h2{
+font-size:42px;
+margin-bottom:15px;
+}
+
+.team-header h2 span{
+color:#3ea87a;
+}
+
+.team-header p{
+color:#666;
+font-size:16px;
+}
+
+
+/* GRID */
+
+.team-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+
+/* CARD */
+
+.team-card{
+background:white;
+border:2px solid #4fb384;
+border-radius:20px;
+padding:30px;
+text-align:center;
+transition:0.3s;
+}
+
+.team-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* PHOTO */
+
+.team-photo{
+width:70px;
+height:70px;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+
+/* TEXT */
+
+.team-card h3{
+margin-bottom:5px;
+font-size:20px;
+}
+
+.designation{
+color:#2f8f5b;
+font-weight:600;
+margin-bottom:15px;
+}
+
+
+/* TAGS */
+
+.tags{
+margin-bottom:15px;
+}
+
+.tag{
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+margin:4px;
+}
+
+.tag.green{
+background:#dff3e8;
+color:#2f8f5b;
+}
+
+.tag.blue{
+background:#e2ebff;
+color:#4a69bd;
+}
+
+.tag.purple{
+background:#efe6ff;
+color:#7c5cc4;
+}
+
+.tag.red{
+background:#fde8e8;
+color:#d64545;
+}
+
+
+/* DESCRIPTION */
+
+.description{
+font-size:14px;
+color:#555;
+margin-bottom:15px;
+}
+
+
+/* CONTACT */
+
+.contact{
+font-size:14px;
+color:#2f8f5b;
+}
+
+.contact div{
+margin:5px 0;
+}
+
+/* EXPERTISE SECTION */
+
+.expertise-section{
+padding:70px 8%;
+background:#f7f9f8;
+margin-top:50px;
+}
+
+.expertise-container{
+background:linear-gradient(180deg,#eef5f1,#e8efec);
+border:2px solid #b6d6c5;
+border-radius:25px;
+padding:60px 40px;
+text-align:center;
+}
+
+.expertise-container h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.expertise-desc{
+color:#666;
+max-width:700px;
+margin:auto;
+margin-bottom:50px;
+}
+
+
+/* GRID */
+
+.expertise-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+
+/* CARD */
+
+.expertise-card h3{
+margin-top:15px;
+font-size:18px;
+}
+
+.expertise-card p{
+font-size:14px;
+color:#666;
+margin-top:6px;
+}
+
+
+/* ICON BOX */
+
+.icon-box{
+width:70px;
+height:70px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+margin-bottom:10px;
+}
+
+.icon-box.green{
+background:#cfe5d8;
+color:#2c7a55;
+}
+
+.icon-box.blue{
+background:#cddae3;
+color:#2c5873;
+}
+
+.icon-box.yellow{
+background:#efe1b8;
+color:#c88b00;
+}
+
+.icon-box.cyan{
+background:#cce8e6;
+color:#2c8b85;
+}

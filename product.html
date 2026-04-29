@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<style>
+
+/* ================= GLOBAL ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#f8fafc,#eef3f0);
+color:#1a1a1a;
+}
+
+/* ================= NAVBAR ================= */
+/* .navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-weight:700;
+font-size:18px;
+}
+
+.nav-links a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.partner-btn{
+background:#2f8f5b;
+color:white !important;
+padding:10px 18px;
+border-radius:8px;
+} */
+
+/* ================= HERO ================= */
+.heroo{
+padding:120px 8% 80px;
+text-align:center;
+background:radial-gradient(circle at top,#e6f4ec,#f8fafc 70%);
+}
+
+.badge{
+display:inline-block;
+padding:8px 20px;
+border-radius:30px;
+background:#e6f4ec;
+color:#2f8f5b;
+font-size:13px;
+margin-bottom:20px;
+}
+
+.heroo h1{
+font-size:54px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.heroo h1 span{
+background:linear-gradient(90deg,#2f8f5b,#5cc39b);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.heroo p{
+color:#5f6b63;
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.7;
+}
+
+/* ================= GRID ================= */
+.products{
+padding:80px 8%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+/* ================= CARD ================= */
+.card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.5);
+transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+}
+
+.icon{
+width:60px;
+height:60px;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#e6f4ec,#d8f3dc);
+margin-bottom:20px;
+}
+
+.icon svg{
+width:28px;
+height:28px;
+stroke:white;
+stroke-width:2;
+fill:none;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+font-size:14px;
+color:#555;
+line-height:1.6;
+margin-bottom:15px;
+}
+
+.features{
+list-style:none;
+}
+
+.features li{
+margin-bottom:8px;
+font-size:14px;
+display:flex;
+align-items:center;
+}
+
+.features li::before{
+content:"✔";
+color:#2f8f5b;
+margin-right:8px;
+}
+
+.scale{
+background:#e6f4ec;
+padding:8px 14px;
+border-radius:10px;
+font-size:13px;
+margin-bottom:10px;
+display:inline-block;
+}
+
+/* ================= FACILITY ================= */
+.facility{
+background:#0b1c17;
+color:white;
+padding:100px 8%;
+text-align:center;
+}
+
+.facility h2{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.facility p{
+color:#94a3b8;
+margin-bottom:50px;
+}
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.facility-card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.1);
+text-align:left;
+}
+
+.facility-card li{
+margin-bottom:10px;
+color:#cbd5e1;
+}
+.green { background: linear-gradient(135deg, #2bb673, #1d9a60); }
+.blue { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.yellow { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+
+.pink { background: linear-gradient(135deg, #ec4899, #be185d); }
+
+.red { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+
+.orange { background: linear-gradient(135deg, #fb923c, #ea580c); }
+
+.teal { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+.hero h1{font-size:34px;}
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+    <img src="images/logoC.png" alt="Logo" class="logo-img">
+
+    <div class="logo-text">
+        Agri-Food Bio-Mug<br>
+        <small style="color:#94a3b8;font-weight:400;">BRIC-NABI Initiative</small>
+    </div>
+</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="process.html">Process</a>
+        <a href="product.html">Products</a>
+        <!-- <a href="#">Facilities</a> -->
+        <a href="team.html">Team</a>
+        <!-- <a href="#">Impact</a> -->
+        <a href="contact.html">Contact</a>
+        <a href="tel:+911725221400">Call Us</a>
+        <a href="contact.html" class="partner-btn">Partner with us </a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="heroo">
+<!-- <div class="badge">UPSCALING TECHNOLOGIES</div> -->
+
+<h1>Our <span>Product Portfolio</span></h1>
+
+<p>
+Validated sustainable products from lab to industry scale,
+designed for real-world impact and commercialization.
+</p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+<div class="grid">
+
+<!-- CARD -->
+<div class="card">
+<div class="icon yellow">
+<svg class="icon-orange" viewBox="0 0 24 24">
+                    <path d="M12 2C12 2 6 9 6 14a6 6 0 0 0 12 0c0-5-6-12-6-12z"/>
+</svg></div>
+<h3>Natural Saffron Dye</h3>
+                <p>Completely natural saffron-based color dye with petals of Palash.
+                Biomass-free, biocompatible, and suitable for textile applications
+                with vibrant color retention.</p>
+<ul class="features">
+<li>Natural & sustainable colorant</li>
+<li>Textile & cosmetic applications</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon green">
+<svg class="icon-green" viewBox="0 0 24 24">
+                    <polyline points="13 2 3 14 11 14 9 22 21 8 13 8 13 2"/>
+</svg></div>
+<h3>Sustainable Green Biofuel</h3>
+                <p>Lignocellulosic biomass contains complex carbohydrates that can be
+                converted to fuel precursors. Alcohol obtained directly from biomass
+                through acidic digestion.</p>
+<ul class="features">
+<li>Renewable energy source</li>
+<li>Carbon-neutral production</li>
+           
+</ul>
+</div>
+
+<div class="card">
+<div class="icon blue">
+<svg class="icon-teal" viewBox="0 0 24 24">
+                    <path d="M12 2C7 7 4 10 4 14a8 8 0 0 0 16 0c0-4-3-7-8-12z"/>
+</svg></div>
+<h3>Bio-Xylitol</h3>
+<div class="scale">50g → Multi-Kilo</div>
+                <p>Low-calorie sweetener prevents gum disease, promotes dental health,
+                and stimulates the immune system. Ideal for diabetic-friendly
+                products and oral care applications.</p>
+<ul class="features">
+<li>Advanced fermentation technology</li>
+<li>Pharmaceutical grade quality</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon cyan">
+<svg viewBox="0 0 24 24" class="icon-green">
+            <path d="M12 2C12 2 6 9 6 14a6 6 0 0 0 12 0c0-5-6-12-6-12z"/>
+</svg></div>
+<h3>Biofertilizer & Biopesticide from Lignin</h3>
+        <p>Utilizing lignin as a sustainable feedstock for natural crop inputs.
+        Eco-friendly microbial fertilizer and biocide for sustainable soil
+        health and chemical-free pest management.</p>
+<ul class="features">
+<li>Sustainable agriculture solution</li>
+<li>Enhanced crop protection</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon purple">
+<svg viewBox="0 0 24 24" >
+            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7 12 2"/>
+</svg></div>
+<h3>Microbial Bio Pigments</h3>
+<div class="scale">Scale: 100g batches</div>
+<p>Suitable for soap, textile, and pharmaceutical industries.
+        Food-friendly bio-pigments with high stability. Eco-friendly
+        alternative to chemical dye industry.</p>
+<ul class="features">
+<li>Multiple pigment varieties</li>
+<li>Clean-label certification</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon teal">
+<svg viewBox="0 0 24 24" >
+            <path d="M12 2L3 7l9 5 9-5-9-5z"/>
+            <path d="M3 7v10l9 5 9-5V7"/>
+            <path d="M12 12v10"/>
+</svg></div>
+<h3>Lignin-Based Food Packaging Film</h3>
+<p>Degradable, biodegradable, and compostable lignocellulosic
+        packaging materials. UV-protective with antimicrobial properties.
+        Carbon-neutral solution for sustainable packaging.</p>
+<ul class="features">
+<li>100% biodegradable materials</li>
+<li>Food-safe applications</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon pink">
+    <svg viewBox="0 0 24 24">
+            <polygon points="12 3 2 8 12 13 22 8 12 3"/>
+            <polyline points="2 13 12 18 22 13"/>
+            <polyline points="2 18 12 23 22 18"/>
+    </svg>
+</svg></div>
+<h3>Levulinic Acid</h3>
+<div class="scale">Scale: 5 Litre → Several Kg</div>
+        <p>Sustainable bioplasticizers for eco-friendly food packaging.
+        Platform chemical derived from lignocellulosic biomass with
+        versatile applications in green chemistry.</p>
+<ul class="features">
+<li>Biomass conversion technology</li>
+<li>Platform for derivative chemicals</li>
+</ul>
+</div>
+
+
+<div class="card">
+<div class="icon orange">
+<svg viewBox="0 0 24 24" >
+            <path d="M12 2L3 7l9 5 9-5-9-5z"/>
+            <path d="M3 7v10l9 5 9-5V7"/>
+        
+</svg></div>
+<h3>Smart Protein</h3>
+<div class="scale">Scale: 10–50g → Industrial Kilo</div>
+                <p>Sustainable protein from corn starch industry waste valorization.
+        High-quality alternative protein source with excellent nutritional
+        profile for food and feed.</p>
+<ul class="features">
+<li>Waste-to-value conversion</li>
+        <li>Complete amino acid profile</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="icon red">
+<svg viewBox="0 0 24 24" >
+            <polygon points="12 3 2 8 12 13 22 8 12 3"/>
+            <polyline points="2 13 12 18 22 13"/>
+        </svg></div>
+<h3>Nano-cellulose</h3>
+<p>High-performance nanomaterial from cellulose with exceptional
+        mechanical properties. Applications in composites, coatings,
+        and advanced materials.</p>
+<ul class="features">
+<li>High-strength materials</li>
+        <li>Sustainable reinforcement</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- FACILITY -->
+<section class="facility">
+
+<h2>Research Facilities</h2>
+<p>Advanced infrastructure for biotech scale-up</p>
+
+<div class="facility-grid">
+
+<div class="facility-card">
+<h3>Bioprocess Lab</h3>
+<ul style="padding-left:40px;padding-top:10px">
+<li>Fermentation systems</li>
+<li>Bioreactors</li>
+<li>Scale-up experiments</li>
+</ul>
+</div>
+
+<div class="facility-card">
+<h3>Analytics Lab</h3>
+<ul style="padding-left:40px;padding-top:10px">
+<li>Purification systems</li>
+<li>Chemical analysis</li>
+<li>Quality testing</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-light">
+    <div class="footer-wrapper">
+
+        <!-- LEFT -->
+        <div class="footer-left">
+            <div class="footer-brand">
+                <img src="images/logoC.png" alt="logo" class="footer-logo">
+                <div>
+                    <h3>Agri-Food Bio-Mug</h3>
+                    <p class="tagline">BRIC-NABI Initiative</p>
+                </div>
+            </div>
+
+            <p class="footer-desc">
+                A world-class biomanufacturing incubation center to experiment your thoughts 
+                and develop your ideas. India's premier agri-food biofoundry, bridging research 
+                and commercialization for a sustainable future.
+            </p>
+
+            <p class="footer-address">
+                <strong>BRIC National Agri-Food and Biomanufacturing Institute</strong><br>
+                (Formerly NABI & CIAB), Sector 81, Mohali, Punjab 140306<br>
+                Supported by Department of Biotechnology, Government of India
+            </p>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-center">
+            <h4>Quick links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-right">
+            <h4>Connect with us</h4>
+
+            <div class="footer-social">
+                <a href="#"><svg viewBox="0 0 24 24">
+            <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2c0-.6.4-1 1-1z"/>
+        </svg></a>
+                <a href="#"><svg viewBox="0 0 24 24">
+        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 
+        5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 
+        1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 
+        1.3-3 3-3zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 
+        0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 
+        0-6zm4.5-2.5a1.2 1.2 0 1 0 0 2.4 
+        1.2 1.2 0 0 0 0-2.4z"/>
+    </svg>  </a>
+                <a href="#"><svg viewBox="0 0 24 24">
+            <path d="M6 9h3v12H6zM7.5 6.5a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5zM12 9h3v2c.5-1 1.6-2 3.2-2C21 9 22 10.5 22 13v8h-3v-7c0-1.5-.5-2.5-1.8-2.5S15 12.5 15 14v7h-3z"/>
+        </svg>  </a>
+                <a href="#"><svg viewBox="0 0 24 24">
+            <path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.8.5-1.7.8-2.6 1C18 4.5 17 4 16 4c-2 0-3.5 1.7-3.5 3.7 0 .3 0 .6.1.8-3-.2-5.7-1.6-7.5-3.9-.3.6-.5 1.2-.5 2 0 1.3.7 2.5 1.8 3.2-.6 0-1.2-.2-1.7-.5v.1c0 1.9 1.3 3.4 3 3.7-.3.1-.7.1-1 .1-.2 0-.5 0-.7-.1.5 1.6 2 2.8 3.7 2.8A7.1 7.1 0 0 1 2 18.5 10 10 0 0 0 7.5 20c6.6 0 10.2-5.6 10.2-10.4v-.5c.7-.5 1.3-1.2 1.8-2z"/>
+        </svg></a>
+            </div>
+
+            <p class="footer-note">
+                Stay updated on our latest innovations and partnerships
+            </p>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom-light">
+        <p>© 2025 BRIC-NABI. All rights reserved.</p>
+        <p class="made"></p>
+    </div>
+</footer>
+<script>
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>   
+</body>
+</html>

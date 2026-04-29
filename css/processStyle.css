@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+    display: flex;
+  justify-content: center; /* Horizontally centers content */
+  align-items: center; 
+  margin: 0;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.process-section {
+    
+  max-width: 1200px;
+  /* margin: auto; */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* HEADER */
+.badge {
+  background: #e9f7ef;
+  color: #2e7d32;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.process-header h1 {
+    
+  margin: 18px 0 10px;
+  font-size: 38px;
+}
+
+.process-header h1 span {
+  color: #2bb673;
+}
+
+.process-header p {
+  max-width: 720px;
+  margin: auto;
+  color: #666;
+}
+
+/* STEPS */
+.step-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 26px 34px;
+  border-radius: 16px;
+  margin: 22px auto;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+
+.primary {
+  background: #fff4d6;
+  color: #a15c00;
+}
+
+.pretreat {
+  background: #e9f7ef;
+  color: #2e7d32;
+}
+
+.arrow {
+  font-size: 28px;
+  color: #2bb673;
+}
+
+/* ICONS */
+.icon {
+  width: 36px;
+  height: 36px;
+}
+
+.icon-sm {
+  width: 26px;
+  height: 26px;
+}
+
+/* FRACTIONS */
+.fractions {
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.fraction {
+  flex: 1;
+  padding: 32px 24px;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.lignin { background:#111; color:#fff; }
+.cellulose { background:#f4f4f4; }
+.hemi { background:#eaf2ff; color:#1e5bd8; }
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.product {
+  padding: 18px 14px;
+  border-radius: 16px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 2px solid;
+}
+
+/* Product colors */
+.biofert { border-color:#6fbf73; color:#2e7d32; }
+.bioplastic { border-color:#f2b705; color:#b78100; }
+.biopesticide { border-color:#f25c5c; color:#b83232; }
+.nanocellulose { border-color:#5c7cfa; color:#364fc7; }
+.levulinic { border-color:#4dabf7; color:#1864ab; }
+.xylitol { border-color:#69db7c; color:#2b8a3e; }
+.pigment { border-color:#e64980; color:#a61e4d; }
+.protein { border-color:#9775fa; color:#5f3dc4; }
+
+/* FOOTER LINK */
+.explore {
+  display: inline-block;
+  margin-top: 40px;
+  color: #2bb673;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .process-header h1 { font-size: 26px; }
+  .fractions { flex-direction: column; }
+  .products { grid-template-columns: 1fr; }
+}
